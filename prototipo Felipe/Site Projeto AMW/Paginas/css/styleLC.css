@@ -1,0 +1,151 @@
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: 'Amazing Slab','Open Sans' ;
+  
+  }
+
+  .body0 {
+    height: 100vh;
+    background: #FDF6ED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .PrincipalContainer{
+  width: 50%;
+  max-width: 800px;
+  min-width: 400px;
+  max-height: 800px;
+  border-width: 10px; 
+  }
+
+  img { 
+    max-height: 150px;
+    max-width: 200px;
+  
+  }
+  
+  .header {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }  
+  
+  .container {
+  background:#FDF6ED ;
+  border-width: 2px; 
+  border-style: solid; 
+  border-color:  #540510; 
+  width: 100%;
+  min-height: 140px ;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  
+  }
+  
+  .box {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+  }
+  
+  .box input {
+    background-color: #FDF6ED;
+    width: 100%;
+    min-width: 200px;
+    border: 1px solid #540510;
+    border-radius: 20px;
+    height: 30px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 20px; 
+    padding-right: 20px;
+    font-size: 20px;
+  }
+  
+  ::placeholder {
+    color: #540510; 
+    font-size: 20px;
+  }
+  
+  .boxBtn{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+  
+  h1 {
+    color: black ;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Open Sans';
+  
+  }
+  
+  .LGCad{
+    flex-direction: row;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  
+  .EsqSen{
+    color:#540510;
+    text-align: end;
+    padding-right: 35px;
+    font-family: sans-serif ;
+    font-weight: bold;
+  }
+  
+  .botao{
+    background-color: #8B5444;
+    font-family: 'Open Sans';
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    animation: none;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+  }
+  
+  .botao:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.2)
+  }
+  
+  .botao2{
+    background-color: #FDF6ED;
+    font-family: 'Open Sans';
+    color: black;
+    padding: 5px 10px;
+    text-align: end;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    animation: none;
+    border: none;
+  }

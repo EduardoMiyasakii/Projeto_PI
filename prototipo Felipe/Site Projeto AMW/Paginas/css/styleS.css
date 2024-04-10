@@ -1,0 +1,102 @@
+  /* Estilos básicos para a navbar */
+.body1 {
+    margin: 0;
+    font-family: 'Amazing Slab','Open Sans' ;
+    background-color: #FDF6ED;
+}
+
+.navbar {
+    background-color: #D1B898;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; 
+    height: 80px;/* Centraliza os itens horizontalmente */
+}
+
+.navbar img {
+    margin-left: 20px;
+    height: 73px; /* Ajuste a altura conforme necessário */
+    margin-top: 5px;
+}
+
+.navbar a {
+    display: inline-block;
+
+    text-align: center;
+    padding: 29px 15px;
+    text-decoration: none;
+}
+
+.navbar a:link {
+    color:#FDF6ED;
+    text-decoration:none;
+}
+
+.navbar a:hover {
+    background-color: #ffffff;
+    color: #FDF6ED;
+    text-decoration: none;
+}
+.navbar a:visited {
+    background-color: #44362f;
+    color: #000000;
+    text-decoration: none;
+}
+
+.navbar a:active {
+    color:#FDF6ED;
+    text-decoration:underline;
+    background-color:#44362f;
+    text-decoration: none;
+}
+
+.navbar .right {
+    margin-left: auto; /* Move os botões para a direita */
+}
+
+.conteudo{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.margem{
+    padding-left: 9%;
+    padding-right: 9%;
+}
+
+h1{
+font-size: 100px;
+}
+
+h4{
+font-size: 29px;
+}
+
+.lampada{
+width: 840px;
+}
+
+.lapis{
+    width: 840px;
+    }
+.imgagem{
+    justify-content: flex-end;
+    display: flex;
+    align-items: flex-end;
+}
+
+.conteudoTOTAL{
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.conteudoTOTALFC{
+    flex-direction: row;
+    text-align: space-between;
+    justify-content: space-between;
+    display: flex;
+}
