@@ -1,0 +1,149 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jomolhari&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jomolhari&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, p {
+    font-weight: unset;
+}
+
+input{
+    border: 1px solid silver;
+}
+
+
+html,body { 
+    height:100%;     
+    display:flex;  
+    flex-direction: row;
+    align-content: space-evenly;
+    background: linear-gradient(90deg, rgb(51, 51, 51) 5%, rgba(230,224,219,1) 66%, rgb(255, 255, 255) 100%);
+}
+
+
+
+.fundo{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    margin-left: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(fundoAMWCadastro.png) no-repeat center;
+}
+
+.divText{
+    align-self: center;
+    color: white;
+}
+
+.title{
+    padding-top: 40px;
+    font-family: "Jomolhari", serif;
+    text-align: center;
+    font-size: 125%;
+    font-weight:lighter ;
+    font-style: normal;
+}
+
+.paragrafo{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    font-size: x-large;
+    padding-bottom: 150px;
+}
+
+.quote{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    text-align: center;
+    font-size: x-large;
+    color: rgba(255, 255, 255, 0.658);
+}
+
+.subTitulo{
+    padding-bottom: 15px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    text-align: center;
+    font-size: xx-large;
+    color: rgba(255, 255, 255, 0.952);
+}
+
+.destaque{
+    font-weight: 500;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 650px;
+    margin-left: 15%;
+    margin-right: 10%;
+    margin-top: 5%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10%;
+    align-items: center;
+    justify-content: space-around;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(41, 41, 41, 0.555);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); 
+}
+
+
+h3{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 350%;
+}
+
+.inputP{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: large;
+}
+
+.inputSignin{
+    border:2px solid #a1a1a1;
+    padding:10px 40px; 
+    background:#ffffff;
+    width:400px;
+    border-radius:25px;
+}
+
+input::placeholder{
+    text-align: left;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #333333;
+    font-size: 18px;
+    border-radius: 0px;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    border: 2px solid #333333;
+    transition: 0.3s;
+    box-shadow: 5px 5px 0px 0px rgba(51, 51, 51, 1);
+    background-color: #ffffff;
+  }
+  
+ button:hover {
+    box-shadow: 0 0 #333;
+    color: #fff;
+    background-color: #333;
+  }
