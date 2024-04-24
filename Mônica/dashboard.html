@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMW</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="imagem">
+        <div class="navBar">
+            <div class="logo">
+                <img src="imagem dashboard certa.png">
+            </div>
+            <h1 class="titulo1">Dashboard</h1>
+            <button onclick="logout()" class="logout">Log Out</button>
+
+        </div>
+        <div class="painel">
+            <h1 style="color: white;" class="subtitulo">Painel de Gerenciamento de Umidade</h1>
+            <div class="quadrado">
+                <div class="quadradoNormalizado">Seções Normalizadas
+                    <div>2</div>
+                </div>
+                <div class="quadradoAlerta">Seções Sob Risco
+                    <div class="numeroAlerta">2</div>
+                </div>
+                <div class="quadradoSobcontrole">Seções em Alerta
+                    <div>1</div>
+                </div>
+            </div>
+        </div>
+        <center class="centroDash">
+            <div class="grafico">
+                <div style="position: relative; height:100vh; width:100vw">
+                    <h4 style="color: white;" class="titulo1">Umidade Semanal</h4>
+                <canvas id="myChart" class="graficoFundo"></canvas>
+            </div>
+            </div>
+            <!-- <div>
+                <canvas id="myChart1" class="graficoFundo"></canvas>
+            </div> -->
+            <div class="locaisMuseu">
+                <h4>Locais do Museu</h4>
+                <div class="locais">
+                    <h4>Museu 1 - Seção 1
+                        <div class="circulos" style="background-color: #FF0000;"></div>
+                    </h4>
+                    <h4>Museu 2 - Seção 4
+                        <div class="circulos" style="background-color: #05FF00;"></div>
+                    </h4>
+                    <h4>Museu 3 - Seção 2
+                        <div class="circulos" style="background-color: #FFB800;"></div>
+                    </h4>
+                    <h4>Museu 4 - Seção 1
+                        <div class="circulos" style="background-color: #05FF00;"></div>
+                    </h4>
+                    <h4>Museu 5 - Seção 9
+                        <div class="circulos" style="background-color: #FF0000;"></div>
+                    </h4>
+                </div>
+            </div>
+                <div class="MinMax">
+                    <div class="MaximaMin">
+                        <h4>Umidade Máxima</h4>
+                        <h5 class="numeroAlerta">22</h5>
+                    </div>
+                    <div class="MaximaMin">
+                        <h4>Umidade Mínima</h4>
+                        <h5 class="numeroAlerta">18</h5>
+                    </div>
+                </div>
+        </center>
+        <center>
+        <div style=" height:60pz; width:60vw">
+            <h1 style="color: white; margin: 10px;" class="titulo1">Controle de Umidade em tempo real</h1>
+                <canvas id="myChart2" class="graficoFundo"></canvas>
+            </div>
+        </center>
+    </div>
+</body>
+
+</html>
+<script style="width: 40px; height: 40px;">
+    const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['1', '2', '3', '4', '5', '6', '7'],
+        datasets: [
+        {
+            label: 'Umidade Média',
+            backgroundColor: 'rgb(50.2, 0, 0)',
+            borderColor: 'rgb(50.2, 0, 0)',
+            data: [80, 90, 82, 90, 85, 90,92,100],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+const ctx2 = document.getElementById('myChart2');
+
+    new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ['12:00AM', '13:00AM', '14:00AM', '15:00AM', '16:00AM', '17:00AM'],
+            datasets: [
+            //     {
+            //     label: 'Temperatura',
+            //     data: [30, 29, 28, 25, 22,23],
+            //     borderWidth: 1
+            // },
+            {
+                label: 'Nível de Umidade',
+                backgroundColor: 'rgb(50.2, 0, 0)',
+                borderColor: 'rgb(50.2, 0, 0)',
+                data: [150, 200, 300, 350, 280, 290, 300, 390, 460, 460, 410, 350, 210, 430, 541, 768, 546, 210, 891, 1000],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            }
+        }
+    });
+
+
+</script>
