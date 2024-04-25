@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleP2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <title>AMW</title>
+</head>
+
+<body class="img">
+    <div class="imagemBack">
+        <div class="texto-titulo">
+            <h1 class="titulo">Dentre os dez principais fatores de risco às obras de arte em museus ou galerias de arte,</h1>
+            <h2>a <b>umidade</b> encontra-se diretamente ligado a quatro deles.</h2>
+            <br> Os fatores são:
+            <br> - Degradação por Umidade e Maresia
+            <br> - Falta de controle de temperatura e Umidade
+            <br> - Vazamentos e Inundações
+            <br> - Pragas em Obras de Arte (Mofo)
+        </div>
+        <div class="main-container">
+            <div class="left-container">
+                <div class="card-calc">
+                    <img class="imglogo" src="Emblema-removebg-preview.png" alt="">
+                    <h1><i></i>Simulador Financeiro</i></h1>
+                    <div class="textfield">
+                        <!-- <label for="nome"></label> -->
+                        <input type="text" placeholder="Nome" id="input_nome">
+                    </div>
+                    <div class="textfield">
+                        <!-- <label for="quantidade de obras">Quantidade de O</label> -->
+                        <input type="text" placeholder="Quantidade de Obras" id="input_quantidadeobras">
+                    </div>
+                    <div class="textfield">
+                        <!-- <label for="quantidade de obras">Quantidade de O</label> -->
+                        <input type="text" placeholder="Custo Médio das Obras" id="input_custoMedio">
+                    </div>
+                    <div class="textfield2">
+                        <!-- <label for="estacao do ano">Estação do ano</label> -->
+                        <select id="input_estacao">
+                            <option value="#" selected disabled>Escolha a estação do ano</option>
+                            <option value="primavera">primavera</option>
+                            <option value="verão">verão</option>
+                            <option value="outono">outono</option>
+                            <option value="inverno">inverno</option>
+                        </select>
+                    </div>
+                    <div class="textfield2">
+                        <select id="input_regiao">
+                            <option value="#" selected disabled>Escolha a região do Brasil onde se encontra o Museu/Galeria</option>
+                            <option value="norte">norte</option>
+                            <option value="nordeste">nordeste</option>
+                            <option value="centro-oeste">centro-oeste</option>
+                            <option value="sudeste">sudeste</option>
+                            <option value="sul">sul</option>
+                        </select>
+                    </div>
+                    <button onclick="analisar()" class="btn-calc">Ver Economia</button>
+
+                </div>
+
+            </div>
+            <div class="right-container">
+                <div class="right-card">
+                    <div id="div_msg" class="div_msg">
+                        <h1><i>Calcule possíveis danos</i>
+                            <p>Prevenir é economizar: antecipe-se e evite prejuízos.</p>
+                        </h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function analisar() {
+        var quantidadeobras = Number(input_quantidadeobras.value);
+        var custoMedio = Number(input_custoMedio.value);
+        var estacao = input_estacao.value;
+        var regiao = input_regiao.value;
+        var nome = input_nome.value;
+
+        var umidade = 0;
+
+        var valorTotal = quantidadeobras * custoMedio;
+        var valorPerdido = (valorTotal * 0.40);
+
+        if (regiao == "centro-oeste") {
+        if (estacao == "verão") {
+            umidade = 56;
+        }
+        if (estacao == "outono") {
+           umidade = 75;
+           valorPerdido = valorPerdido + 350;
+        }
+        if (estacao == "inverno") {
+            umidade = 61;
+        }
+        if (estacao == "primavera") {
+            umidade = 67.5;
+        } 
+    }
+
+
+        if (regiao == "norte") {
+
+        if (estacao == "verão") {
+            umidade = 72.5;
+            valorPerdido = valorPerdido + 300;
+        }
+        if (estacao == "outono") {
+          umidade = 69.25;
+        }
+        if (estacao == "inverno") {
+            umidade = 51.75;
+        }
+        if (estacao == "primavera") {
+            umidade = 66.5;
+        }
+    }
+
+
+        if (regiao == "sudeste") {
+
+        if (estacao == "verão") {
+            umidade = 70;
+            valorPerdido = valorPerdido + 300;
+        }
+        if (estacao == "outono") {
+            umidade = 68;
+        }
+        if (estacao == "inverno") {
+            umidade = 58.75;
+        }
+        if (estacao == "primavera") {
+            umidade = 66.25;
+        }
+    }
+
+    
+        if (regiao == "sul") {
+        
+        if (estacao == "verão") {
+            umidade = 77.7;
+            valorPerdido = valorPerdido + 370;
+        }
+        if (estacao == "outono") {
+            umidade = 75;
+            valorPerdido = valorPerdido + 350;
+        }
+        if (estacao == "inverno") {
+            umidade = 74.25;
+            valorPerdido = valorPerdido + 340;
+        }
+        if (estacao == "primavera") {
+            umidade = 76;
+            valorPerdido = valorPerdido + 360;
+        }
+        }
+
+
+        if (regiao == "nordeste") {
+
+        if (estacao == "verão") {
+            umidade = 77;
+            valorPerdido = valorPerdido + 370;
+        }
+        if (estacao == "outono") {
+            umidade = 76;
+            valorPerdido = valorPerdido + 360;
+        }
+        if (estacao == "inverno") {
+            umidade = 65;
+        }
+        if (estacao == "primavera") {
+            umidade = 61;
+        }
+    }
+
+    div_msg.innerHTML = ` Olá ${nome}! Na região ${regiao} durante a estação ${estacao} a porcentagem média de umidade é ${umidade}%`
+
+    div_msg.innerHTML += `<br> Nessas condições você pode ter um prejuízo estimado de R$${valorPerdido}<br> Com nosso sistema você pode reduzir esse prejúizo em até 40%`;
+    }
+</script>
