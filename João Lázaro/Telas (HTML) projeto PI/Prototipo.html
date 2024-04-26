@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <img src="C:\Users\netoj\Downloads\Logo_AMW-removebg-preview.png" alt="">
+
+        <div class="box2"><p>INFORMAÇÕES CADASTRAIS</p></div>
+
+        <div class="boxinp">
+            <div>
+                <p class="paragrafo">Nome completo</p>
+                <input type="text" id="input_nome" placeholder="Nome">     
+            </div>
+            <div>
+                <p class="paragrafo">Endereço de Email</p> 
+                <input type="text" id="input_email" placeholder="Email">  
+            </div>
+            <div>
+                <p class="paragrafo">CNPJ</p>
+                <input type="text" id="input_CNPJ" placeholder="CNPJ">   
+            </div>
+           <div>
+            <p class="paragrafo">Nome de Usuário</p>
+            <input type="text" id="input_usuario" placeholder="Usuário">
+           </div>
+           <div>
+            <p class="paragrafo">Senha</p>
+            <input type="password" id="input_Senha" placeholder="Senha"> 
+           </div>
+           <div>
+            <p class="paragrafo">Confirmar Senha</p>
+            <input type="password" id="input_Senha" placeholder="Confirmar Senha"> 
+           </div>
+
+           <div class="mensagem" id="div_msg"></div>
+           <a href='C:\Users\netoj\Desktop\Telas (HTML) projeto PI\PrototipoLogin.html'><button onclick="login()" class="login">LOGIN</button></a>
+        </div>
+       <button onclick="cadastra()" class="button">Cadastrar</button>
+    </div>
+</body>
+</html>
+
+<script>
+    
+    function cadastra (){
+        var nome = input_nome.value; 
+        div_msg.innerHTML = `Parabéns ${nome}, você foi cadastrado com sucesso! <br> clique em Login para entrar.  `;
+    }
+</script>
