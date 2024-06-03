@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMW</title>
+    <link rel="stylesheet" href="css/stylePiLC.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Js/JavaScriptDoSI.js">
+</head>
+<body>
+    <div id="div_filho2" class="imgagemBackGro">
+        <div class="ConteinerTotal">
+            <img class="imglogo" src="assets/imgs/imgLogo.png" alt="">
+            <H1 class="titulo">CADASTRO MUSEU</H1>
+            <div class="dibInput">
+                <input id="ipt_nomeM" type="text" placeholder="Nome Museu">
+                <input id="ipt_cep" type="text" placeholder="Cep">
+                <input id="ipt_num" type="text" placeholder="Número">
+                <input id="ipt_complemento" type="text" placeholder="Complemento">
+                <input id="ipt_cnpj" type="text" placeholder="CNPJ">
+            </div>
+            <div class="div_botton">
+                <button onclick="voltar()" class="botton_v">Voltar</button>
+                <button onclick="cadastrar()" class="botton">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function cadastrar() {
+        window.location.href = ("./login.html")
+    }
+    function voltar() {
+        window.location.href = ("./cadastro.html")
+    }
+</script>
