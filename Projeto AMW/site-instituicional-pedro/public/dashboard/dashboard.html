@@ -303,6 +303,8 @@
 
                     // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
                     proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
+
+                    // setInterval:, alterar setTimeout para setInterval
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');

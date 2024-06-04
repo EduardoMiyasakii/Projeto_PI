@@ -35,8 +35,8 @@ const serial = async (
             // altere!
             // Credenciais do banco de dados
             host: '127.0.0.1',
-            user: 'root',
-            password: '#Gf48043477809',
+            user: 'aluno',
+            password: 'sptech',
             database: 'SPrint2',
             port: 3306
             // host: 'localhost',
@@ -76,6 +76,7 @@ const serial = async (
         console.log(data);
         const valores = data.split(';');
         const umidade = parseFloat(valores[0]);
+        // const fkSensor = parseInt(valores[1]);
         // const dht11Temperatura = parseFloat(valores[1]);
         // const lm35Temperatura = parseFloat(valores[2]);
         // const luminosidade = parseFloat(valores[3]);
@@ -97,8 +98,8 @@ const serial = async (
             // altere!
             // Este insert irá inserir os dados na tabela "medida"
             await poolBancoDados.execute(
-                'INSERT INTO Logg (umidade) VALUES (?)',
-                [umidade]
+                'INSERT INTO registro (umidade, fkSensor) VALUES (?,?)',
+                [umidade, 1]
             );
             console.log("valores inseridos no banco: ", umidade)
         
