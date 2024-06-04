@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Js/JavaScriptDoSI.js">
+    <!-- <link rel="stylesheet" href="Js/JavaScriptDoSI.js"> -->
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                 <input id="senha_input" type="password" placeholder="Senha">
             </div>
             <div class="div_botton3">
-                <button onclick="login()" class="botton2">Continuar</button>
+                <button onclick="entrar() " class="botton2">Continuar</button>
                 <button onclick="Ircadastrar()" class="botton">Cadastre-se</button>
                 <!-- <p class="senha">Esqueceu a Senha?</p> -->
             </div>
@@ -40,23 +40,18 @@
     //     window.location.href = ("dahsboard.html")
     // }
     function Ircadastrar() {
-        window.location.href = ("./cadastro.html")
+        window.location.href = ("./cadastroMuseu.html")
     }
 
-    function login() {
-         window.location.href = ("./dahsboard.html")
-    }
 
     function entrar() {
-        aguardar();
+
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
+          alert("erro")
             return false;
         }
         else {
@@ -85,10 +80,8 @@
                     console.log(json);
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
-
+                    sessionStorage.NOME_USUARIO = json.nomeUsuario;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
                     setTimeout(function () {
                         window.location = "dahsboard.html";
                     }, 1000); // apenas para exibir o loading

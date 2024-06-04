@@ -8,9 +8,11 @@ use SPrint2;
 	cpf char(12) not null,
 	senha varchar(8) not null,
     fkCadastroMuseu int not null,
-    constraint fkCadastroMuseuCadastroUsuario foreign key (fkCadastroMuseu)
-   references CadastroUsuario(idUsuario)
+	foreign key (fkCadastroMuseu)
+   references museu(idMuseu)
 	);
+    
+    SELECT * FROM usuario;
     
     create table museu(
     idMuseu int primary key auto_increment,
@@ -22,7 +24,9 @@ use SPrint2;
     qtdSecao varchar(50)
     );
     
-
+    insert into museu (nomeMuseu,cep, numero,complemento,cnpj,qtdSecao) values();
+    
+select * from museu;
 	create table secao(
 	idSecao int primary key auto_increment,
 	nomeSecao varchar(120),
@@ -39,4 +43,3 @@ use SPrint2;
     foreign key (fkSecao) references secao(idSecao)
     );
     
-    create table 
