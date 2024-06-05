@@ -1,8 +1,6 @@
 create database SPrint2;
 use SPrint2;
 
-drop database SPrint2;
-
     create table usuario(
 	idUsuario int primary key auto_increment,
 	nomeUsuario varchar(120) not null,
@@ -69,18 +67,6 @@ insert into sensor values
      (default, 1);
      
 select * from registro;
-
-
-    create table usuario(
-	idUsuario int primary key auto_increment,
-	nomeUsuario varchar(120) not null,
-	email varchar(120) not null,
-	cpf char(12) not null,
-	senha varchar(8) not null,
-    fkCadastroMuseu int not null,
-	foreign key (fkCadastroMuseu)
-   references museu(idMuseu)
-	);
     
-    insert into usuario values
+insert into usuario values
     (default, 'Lívia','livia@gmail.com','48955745632','1234',1);
