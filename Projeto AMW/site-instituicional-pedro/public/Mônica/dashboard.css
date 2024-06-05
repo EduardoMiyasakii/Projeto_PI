@@ -1,0 +1,147 @@
+
+*{
+    margin: 0;
+    padding: 0;
+   
+   
+}
+ .imagem{
+    background-image: url('ImagemDash.png');
+     width: 100%;
+     justify-content: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ .navBar{
+    width: 100%; 
+    height: 75px; 
+    background-color: #D1B898;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+   }
+   
+   img{
+      width: 60px;
+      height: 60px;
+      background-repeat: no-repeat;
+
+  }
+   .subtitulo{
+      align-self: center;
+      margin-left: 30%;
+      
+   }
+  .painel{
+   padding-bottom: 50px;
+  }
+
+  
+ .titulo1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    
+ }
+
+ .logout{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    height: 30px;
+    width: 60px;
+ }
+
+ .quadrado{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding-top: 50px;
+ }
+ .quadradoNormalizado{
+    width: 200px; 
+    height: 50px; 
+    background-color: #05FF00; 
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+ }
+
+ .quadradoAlerta{
+    width: 200px; 
+    height: 90px; 
+    background-color: #F44F4F;
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+ }
+ .numeroAlerta{
+   font-size: 50px;
+ }
+ .quadradoSobcontrole{
+    width: 200px; 
+    height: 50px; 
+    background-color: #FFB800; 
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+ }
+ .grafico{
+    width: 500px; 
+    height: 500px; 
+    display: flex;
+    justify-content: end; 
+ }
+ .graficoFundo{
+    background-color: white; 
+    border-radius: 20px;
+ }
+ .MinMax{
+    width: 90px; 
+    height: 130px; 
+    display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin: 40px;
+ }
+ .MaximaMin{
+   background-color: #D1B898;
+   border-radius: 20px;
+   padding: 10px;
+   height: 80px;
+   width: 80px;
+ }
+ /* .locais{
+   width: 80%; 
+   height: 80%; 
+ } */
+
+ .locaisMuseu{
+   display: flex;
+   flex-direction: column;
+   background-color: white;
+   height: 190px;
+   padding: 20px;
+   margin: 30px;
+   border-radius: 20px;
+  
+ }
+ .circulos{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+ }
+ .centroDash{
+   display: flex;
+   justify-content: space-evenly;
+ }
+
+ 
