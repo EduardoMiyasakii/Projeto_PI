@@ -7,6 +7,14 @@ router.get("/ultimas/:idAquario", function (req, res) {
     medidaController.buscarUltimasMedidas(req, res);
 });
 
+router.get("/semanal/:idAquario/", function (req, res) {
+    medidaController.buscarUltimasMedidas2(req, res);
+});
+
+// router.get("/ultimas2/:idAquario", function (req, res) {
+//     medidaController.buscarUltimasMedidas(req, res);
+// });
+
 router.get("/tempo-real/:idAquario", function (req, res) {
     medidaController.buscarMedidasEmTempoReal(req, res);
 })
